@@ -21,10 +21,10 @@ public class Driver {
 	 */
 	public static void main(String[] args) {
 		try {
-			br = new BufferedReader(new FileReader(new File(args[0])));
-			bw = new BufferedWriter(new FileWriter(new File(args[1])));
+			br = new BufferedReader(new FileReader(new File("input.txt")));
+			bw = new BufferedWriter(new FileWriter(new File("output.txt")));
 
-			long numCases = nextLong();
+			final long numCases = nextLong();
 			for (long i = 1; i <= numCases; i++) {
 				// read the inputs
 
@@ -54,7 +54,7 @@ public class Driver {
 	}
 
 	private static void writeCaseHeaderSingleResult(long caseNum, String result) throws IOException {
-		String caseString = String.format("Case #%s: %s", caseNum, result);
+		String caseString = String.format("Case #%s: %s\r\n", caseNum, result);
 		write(caseString);
 	}
 
